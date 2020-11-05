@@ -4,7 +4,7 @@ import "./App.css";
 import IssueDetail from "./components/IssueDetail/IssueDetail";
 import IssueList from "./components/IssueList/IssueList";
 import IssuesByLabel from "./components/IssuesByLabel/IssuesByLabel";
-import User from "./components/User/User";
+import UserPage from "./components/UserPage/UserPage";
 import Users from "./components/Users/Users";
 
 function App() {
@@ -70,8 +70,8 @@ function App() {
               <Route path="/issues/:number" component={IssueList} />
               <Route path="/labels/:name" component={IssuesByLabel} />
               <Route path="/issue/:issueNumber" component={IssueDetail}/>
-              <Route path="/users" component={Users}/>
-              <Route path="/user-search/:username" component={User}/>
+              <Route exact path="/users" component={Users}/>
+              <Route path="/users/:username" component={UserPage}/>
             </>
           )}
           <Route>

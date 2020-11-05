@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import UserCard from "../UserCard/UserCard"
 
 export default function Users() {
 const [ userName, setUserName ] = useState();
@@ -34,7 +35,7 @@ const handleSubmit = (e) => {
             <h2>Results</h2>
             <div className="users">
                 { users.map((user) => {
-                    return <div>{ user.login }</div>
+                    return <UserCard user={user}/>
                 })}
             </div>
         </div>
